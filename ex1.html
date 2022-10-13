@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function compute(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c =document.getElementById("c").value;
+            
+            let del=(Math.pow(b,2))-4*a*c;
+            let sqrtdel = Math.sqrt(del);
+            console.log(del);
+            console.log(sqrtdel);
+
+            if(del>0)
+            {
+
+                let x1= (-b-sqrtdel)/(2*a);
+                let x2=(-b+sqrtdel)/(2*a);
+                document.getElementById("res").innerHTML="x1= "+x1+" x2= "+x2;
+
+            }
+            else if(del==0)
+            {
+                let x = -b/2*a;
+                document.getElementById("res").innerHTML="x1=x2=  "+x;
+            }
+            else{
+                document.getElementById("res").innerHTML="pas de solution car del est inferieur a 0";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="number" id="a" > <strong>x<super>2</super></strong>+
+                <input type="number" id="b" > <strong>x</strong> +
+                <input type="number" id="c" > = 0
+                
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                <button onClick="compute()" >Calucler</button>
+            </td>
+        </tr>
+      
+       
+    </table>
+    <p id="res"></p>
+   
+</body>
+</html>

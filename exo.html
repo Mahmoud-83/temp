@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ctof()
+        {
+           document.getElementById('f').value=document.getElementById('c').value *(9/5)+32 ;
+
+        }
+        function ftoc()
+        {
+            document.getElementById('c').value=(document.getElementById('f').value-32) *(5/9) ;
+        }
+
+    </script>
+</head>
+<body>
+     <h2 style="text-align:center;" > Convertir</h2>
+  
+
+   
+        <table  style="margin-left: auto;margin-right: auto;">
+            <tr>
+                <td>
+                    <label for="c">C : </label>
+                    <input type="number" name="c" id="c" onchange="ctof()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="f">F : </label>
+                    <input type="number" name="f" id="f" onchange="ftoc()" >
+                </td>
+            </tr> <!--
+            <tr>
+               
+                <td>
+                    <button  type="button" onclick="ctof()">C to F</button> 
+                </td>
+                <td> <button type="button" onclick="ftoc()"> F to C </button></td>
+            </tr>
+            -->
+           
+            
+
+        </table>
+    
+</body>
+</html>
